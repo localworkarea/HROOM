@@ -510,6 +510,20 @@ body {
 .btn.btn-03.inactive {
   opacity: .5
 }
+.btn.btn-01:not(._active):hover,
+.btn.btn-02:not(._active):hover {
+  -webkit-transform: translateY(-.1875rem);
+  transform: translateY(-.1875rem);
+  color: #fff
+}
+.btn.btn-01:not(._active):hover::before,
+.btn.btn-02:not(._active):hover::before {
+  background-color: #0a4780
+}
+.btn.btn-01:not(._active):hover::after,
+.btn.btn-02:not(._active):hover::after {
+  background-color: #1b76ca
+}
 .btn.incorrect._active {
   color: #000;
   -webkit-transform: translateY(0);
@@ -1426,21 +1440,5 @@ body {
     .puzzle__item {
       padding-right: calc(1.25rem + 6.25 * (100vw - 30.06125rem)/ 49.93875)
     }
-  }
-}
-@media (any-hover:hover) {
-  .btn.btn-01:hover,
-  .btn.btn-02:hover {
-    -webkit-transform: translateY(-.1875rem);
-    transform: translateY(-.1875rem);
-    color: #fff
-  }
-  .btn.btn-01:hover::before,
-  .btn.btn-02:hover::before {
-    background-color: #0a4780
-  }
-  .btn.btn-01:hover::after,
-  .btn.btn-02:hover::after {
-    background-color: #1b76ca
   }
 }

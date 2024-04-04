@@ -555,7 +555,7 @@
   }
   &.btn-01,
   &.btn-02 {
-    @media (any-hover: hover){
+    &:not(._active) {
       &:hover{
         transform: translateY(toRem(-3));
         color: #fff;
