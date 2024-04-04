@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+	"title":"HROOM | HOME PAGE"
+	})
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<div class="page-bg">
+					<picture>
+						<source media="(min-width: 30.06125em)" srcset="img/bg.svg" type="image/svg+xml" width="1280" height="720">
+						<source media="(max-width: 30.06125em)" srcset="img/bg-mob.svg" type="image/svg+xml" width="390" height="844">
+						<img class="page-bg__bg ibg" src="image-pc.svg" alt="бекграунд">
+					</picture>
+					<div class="page-bg__speakers">
+						<img class="page-bg__speaker speaker-left" width="238" height="223" src="@img/elements/speaker.png" alt="колонка з музикою">
+						<img class="page-bg__speaker speaker-right"  width="238" height="223" src="@img/elements/speaker.png" alt="колонка з музикою">
+					</div>
+				</div>
+				<div class="page-bg-b">
+					<img class="page-bg-b__cracker cracker-01" src="@img/elements/el-10.png" width="171" height="330" alt="сухарик">
+					<img class="page-bg-b__cracker cracker-02" src="@img/elements/el-12.png" width="309" height="363" alt="сухарик">
+					<img class="page-bg-b__cracker cracker-03" src="@img/elements/el-12.png" width="309" height="363" alt="сухарик">
+					<img class="page-bg-b__cracker cracker-04" src="@img/elements/el-12.png" width="309" height="363" alt="сухарик">
+				</div>
+				<div class="page-bg-c">
+					<picture>
+						<source srcset="img/crackers-bg.webp" type="image/webp" width="1280" height="720">
+						<source srcset="img/crackers-bg.png" type="image/png" width="1280" height="720">
+						<img class="page-bg-c__cracker-01 ibg ibg--contain" src="@img/crackers-bg.png" width="1280" height="720" alt="декілька сухариків хаотично розставлені по сторінці">
+					</picture>
+						<img class="page-bg-c__cracker cracker-01" width="42" height="57" src="@img/elements/el-3.png" alt="Image">
+						<img class="page-bg-c__cracker cracker-02" width="42" height="57" src="@img/elements/el-3.png" alt="Image">
+						<img class="page-bg-c__cracker cracker-03" width="51" height="77" src="@img/elements/el-2.png" alt="Image">
+				</div>
+
+				<section class="section section-01 _show">
+					<div class="section-01__container">
+						<div class="section-01__head head-section head--big">
+							<img class="head-section__logo" src="@img/icons/logo.svg" width="307" height="120" alt="лого Hroom">
+							<div class="head-section__block">
+								<h1 class="head-section__title">
+									Залітають що пісня,<br> як не крути!
+								</h1>
+							</div>
+						</div>
+						<div class="section-01__content">
+							<div class="section-01__msg msg">
+								<p class="msg__txt">
+									Ставлять лайк всі навколо, навіть коти!
+								</p>
+								<img class="msg__heart heart-01" width="60" height="60" src="@img/icons/heart.svg" alt="сердечко червоне">
+								<img class="msg__heart heart-02" width="60" height="60" src="@img/icons/heart.svg" alt="сердечко червоне">
+								<img class="msg__heart heart-03" width="60" height="60" src="@img/icons/heart.svg" alt="сердечко червоне">
+							</div>
+							<picture>
+								<source media="(max-width: 30.06125em)" srcset="img/cat-mob.webp" type="image/webp" width="491" height="364">
+								<source media="(max-width: 30.06125em)" srcset="img/cat-mob.png" type="image/png" width="491" height="364">
+								<source srcset="img/cat.webp" type="image/webp" width="491" height="364">
+								<source srcset="img/cat.png" type="image/png" width="491" height="364">
+								<img class="section-01__cat" src="img/cat.png" width="491" height="364" alt="кіт за програвачем пластинок з музикою Хрум">
+							</picture>
+							<picture>
+								<source media="(max-width: 30.06125em)" srcset="img/mens-mob.webp" type="image/webp" width="503" height="508">
+								<source media="(max-width: 30.06125em)" srcset="img/mens-mob.png" type="image/png" width="503" height="508">
+								<source srcset="img/mens.webp" type="image/webp" width="503" height="508">
+								<source srcset="img/mens.png" type="image/png" width="503" height="508">
+								<img class="section-01__mens" src="img/mens.png" width="503" height="508" alt="група чоловіків що їдять Хрум">
+							</picture>
+						</div>
+						<button type="button" class="section-01__action action" aria-label="кнопка переходу далі на сторінку з головоломкою">
+							<span class="action__txt">
+								Hroom-головоломка
+							</span>
+							<img class="action__arr" src="@img/icons/arrow.svg" width="43" height="75" alt="стрілочка що вказує на кнопку">
+						</button>
+					</div>
+				</section>
+
+				<section class="section section-02 _hidden">
+					<div class="section-02__container">
+						<div class="section-02__head head-section head--sm">
+							<img class="head-section__logo" src="@img/icons/logo.svg" width="307" height="120" alt="лого Hroom">
+							<div class="head-section__block">
+								<h1 class="head-section__title">
+									Клич друзів – влаштовуй<br> Hroom-змагання
+								</h1>
+							</div>
+						</div>
+						<ul class="section-02__puzzle puzzle">
+							<li class="puzzle__item item-01 _show">
+								<div class="puzzle__image">
+									<picture>
+										<source media="(max-width: 30.06125em)" srcset="img/section_02/first-mob.webp" type="image/webp" width="446" height="318">
+										<source media="(max-width: 30.06125em)" srcset="imgsection_02/first-mob.jpg" type="image/jpg" width="446" height="318">
+										<source srcset="img/section_02/first.webp" type="image/webp" width="446" height="318">
+										<source srcset="img/section_02/first.jpg" type="image/jpg" width="446" height="318">
+										<img class="puzzle__img ibg ibg--contain" src="img/section_02/first.jpg" width="446" height="318" alt="різні таємничі візерунки на килимі">
+									</picture>
+								</div>
+								<div class="puzzle__answers">
+									<h2 data-da=".item-01,700.98,0" class="puzzle__title">
+										Знайди, що приховано<br> у візерунку килима:
+									</h2>
+									<ul class="puzzle__buttons">
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 is-correct" type="button" aria-label="кнопка вибору">
+												<span>Кіт</span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-02 incorrect" type="button" aria-label="кнопка вибору">
+												<span>Мікрофон</span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 incorrect" type="button" aria-label="кнопка вибору">
+												<span>Логотип Hroom</span>
+											</button>
+										</li>
+									</ul>
+									<button class="puzzle__next btn btn-03 inactive" disabled type="button" aria-label="кнопка перемикання на наступну головоломку">
+										<span>Далі</span>
+										<img src="@img/icons/arr-right.svg" width="6" height="12" alt="стрілочка вправо">
+									</button>
+								</div>
+								<div class="puzzle__count">
+									1/3
+								</div>
+							</li>
+							<li class="puzzle__item item-02 _hidden">
+								<div class="puzzle__image">
+									<picture>
+										<source media="(max-width: 30.06125em)" srcset="img/section_02/second-mob.webp" type="image/webp" width="446" height="318">
+										<source media="(max-width: 30.06125em)" srcset="imgsection_02/second-mob.jpg" type="image/jpg" width="446" height="318">
+										<source srcset="img/section_02/second.webp" type="image/webp" width="446" height="318">
+										<source srcset="img/section_02/second.jpg" type="image/jpg" width="446" height="318">
+										<img class="puzzle__img ibg ibg--contain" src="img/section_02/second.jpg" width="446" height="318" alt="різні таємничі візерунки на килимі">
+									</picture>
+								</div>
+								<div class="puzzle__answers">
+									<h2 data-da=".item-02,700.98,0"  class="puzzle__title">
+										Знайди шлях<br>
+										до Hroom:
+									</h2>
+									<ul class="puzzle__buttons">
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 incorrect" type="button" aria-label="кнопка вибору">
+												<span>1</span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-02 is-correct" type="button" aria-label="кнопка вибору">
+												<span>2</span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 incorrect" type="button" aria-label="кнопка вибору">
+												<span>3</span>
+											</button>
+										</li>
+									</ul>
+									<button class="puzzle__next btn btn-03 inactive" disabled type="button" aria-label="кнопка перемикання на наступну головоломку">
+										<span>Далі</span>
+										<img src="@img/icons/arr-right.svg" width="6" height="12" alt="стрілочка вправо">
+									</button>
+								</div>
+								<div class="puzzle__count">
+									2/3
+								</div>
+							</li>
+							<li class="puzzle__item item-03 _hidden">
+								<div class="puzzle__image">
+										<img class="puzzle__img ibg ibg--contain" src="img/section_02/third.svg" width="446" height="318" alt="букви в матриці">
+								</div>
+								<div class="puzzle__answers">
+									<h2 data-da=".item-03,700.98,0" class="puzzle__title">
+										Знайди 3 слова, що<br> описують Hroom-вайб:
+									</h2>
+									<ul class="puzzle__buttons">
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 incorrect" type="button" aria-label="кнопка вибору">
+												<span>Смак, танці, кіт </span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-02 is-correct" type="button" aria-label="кнопка вибору">
+												<span>Смак, друзі, енерегія</span>
+											</button>
+										</li>
+										<li class="puzzle__button">
+											<button class="puzzle__btn btn btn-01 incorrect" type="button" aria-label="кнопка вибору">
+												<span>Енергія, текстура, смак</span>
+											</button>
+										</li>
+									</ul>
+									<button class="puzzle__next btn btn-03 inactive" disabled type="button" aria-label="кнопка перемикання на наступний екран">
+										<span>Далі</span>
+										<img src="@img/icons/arr-right.svg" width="6" height="12" alt="стрілочка вправо">
+									</button>
+								</div>
+								<div class="puzzle__count">
+									3/3
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="section section-03 _hidden">
+					<div class="section-03__container">
+						<div class="section-03__head head-section head--sm">
+							<img class="head-section__logo" src="@img/icons/logo.svg" width="307" height="120" alt="лого Hroom">
+							<div class="head-section__block">
+								<h1 class="head-section__title">
+									Клич друзів –<br>
+									роби Hroom-Hroom
+								</h1>
+							</div>
+						</div>
+
+					</div>
+				</section>
+			
+			</main>
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>
+
