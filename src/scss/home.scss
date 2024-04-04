@@ -1,6 +1,7 @@
 .page-bg,
 .page-bg-b,
-.page-bg-c {
+.page-bg-c,
+.page-bg-d {
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -147,6 +148,18 @@
      }
     }
 	}
+}
+
+.page-bg-d {
+  &._hidden {
+    display: none;
+  }
+  &._show {
+    display: block;
+  }
+  // .page-bg-d__img
+  &__img {
+  }
 }
 
 
@@ -344,6 +357,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: toRem(20);
   @include adaptiveValue("margin-bottom", 85, 30,0,1280.98,480.98);
   transition: transform .3s ease;
   outline: none;
@@ -357,23 +371,28 @@
   }
   &::before {
     z-index: -1;
-    background-color: #000;
+    
     right: -5px;
     bottom: -5px;
+    width: calc(100% + toRem(10));
+    @media (min-width:$mobileSmall){
+      background-color: #fff;
+    }
+    @media (max-width:$mobileSmall){
+      background-color: #000;
+    }
   }
   &::after {
     left: 0;
     top: 0;
     z-index: 0;
-    background-color: $red;
+    background-color: #e23642;
     transition: background-color .3s ease;
   }
   &:hover{
     transform: translateY(toRem(-5));
-    &::after {
-      background-color: #ad0d18;
-    }
   }
+  padding: toRem(30) toRem(40) toRem(20);
   // .action__txt
   &__txt {
     position: relative;
@@ -381,15 +400,30 @@
     font-weight: 600;
     font-size: toRem(26);
     color: #fff;
-    padding: toRem(30) toRem(40) toRem(20);
+  }
+  // .action__arr-right
+  &__arr-right {
+    position: relative;
+    z-index: 1;
+    width: toRem(12);
+    height: auto;
+    margin-bottom: toRem(-3);
   }
   // .action__arr
   &__arr {
     position: absolute;
     z-index: 2;
-    top: -70%;
-    right: 12%;
     animation: arrowAnimation 1.5s ease-in-out infinite;
+    width: toRem(50);
+    height: auto;
+    @media (min-width:$mobileSmall){
+      top: -106%;
+      right: 35%;
+    }
+    @media (max-width:$mobileSmall){
+      top: -90%;
+      right: 35%;
+    }
   }
 }
 
@@ -644,9 +678,206 @@
 
 // ====================================================================
 .section-03 {
+    z-index: 6;
+    // .section-03__body
+    &__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      min-height: 100svh;
+      overflow: auto;
+      padding-bottom: toRem(25);
+    }
 		// .section-03__container
 		&__container {
 		}
+		// .section-03__head
+		&__head {
+    }
+    // .section-03__content
+    &__content {
+      &._show {
+        display: block;
+      }
+      &._hidden {
+        display: none;
+      }
+      width: 100%;
+      overflow: hidden;
+      margin-top: toRem(46);
+      @media (max-width: toEm(1100.98)){
+        padding-left: toRem(20);
+        padding-right: toRem(20);
+      }
+    }
+		// .section-03__slider
+		&__slider {
+      height: toRem(297);
+      max-width: toRem(1000);
+      margin: 0 auto;
+		}
+		// .section-03__wrapper
+		&__wrapper {
+		}
+		// .section-03__slide
+		&__slide {
+     
+		}
+		// .section-03__img
+		&__img {
+     
+		}
+		// .section-03__btn
+		&__btn {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);      
+      width: toRem(44);
+      height: toRem(45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.swiper-button-prev {
+        transform: translate(0, -50%) scaleX(-1);
+        @media (min-width:toEm(1140)){
+          left: toRem(-50);          
+        }
+        @media (max-width:toEm(1140)){
+          left: toRem(20);
+        }
+        @media (max-width:$mobileSmall){
+          left: toRem(0);
+        }
+      }
+      &.swiper-button-next {
+        @media (min-width:toEm(1140)){
+          right: toRem(-50);          
+        }
+        @media (max-width:toEm(1140)){
+          right: toRem(20);
+        }
+        @media (max-width:$mobileSmall){
+           right: 0; 
+        }
+      }
+
+      &::before,
+      &::after {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(0 0, 100% 19%, 91% 87%, 9% 100%);
+      }
+      &::before {
+        z-index: -1;
+        background-color: #000;
+        right: -5px;
+        bottom: -5px;
+      }
+      &::after {
+        left: 0;
+        top: 0;
+        z-index: 0;
+        background-color: $red;
+      }
+		}
+    // .section-03__arr-right
+    &__arr-right {
+      position: relative;
+      z-index: 2;
+      width: toRem(8);
+      height: auto;
+    }
+    // .section-03__next
+    &__next {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: toRem(53);
+      margin-bottom: 10px;
+      padding: toRem(20) toRem(50) toRem(20);
+      max-width: toRem(250);
+      transition: transform .3s ease;
+      span {
+        font-weight: 600;
+        font-size: toRem(26);
+      }
+      img {
+        width: toRem(12);
+        height: auto;
+      }
+      @media (any-hover: hover){
+        &:hover{
+          transform: translateY(-5px);
+        }
+      }
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    // .section-03__social
+    &__social {
+    }
+    // .section-03__video
+    &__video {
+    }
 }
 
 
+.video {
+  &._show {
+    display: block;
+  }
+  &._hidden {
+    display: none;
+  }
+  @media (min-width:$mobile){
+    margin-top: toRem(-20);
+  }
+  @media (max-width:$mobile){
+     margin-top: toRem(20); 
+  }
+  // .video__el
+  &__el {
+    width: 100%;
+    height: auto;
+    max-width: toRem(698);
+    box-shadow: 5px 5px 0px #fff;
+  }
+}
+
+.social {
+  margin-top: toRem(24);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  @include adaptiveValue("column-gap", 53, 25,0,1280.98,480.98);
+  // .social__item
+  &__item {
+  }
+  // .social__link
+  &__link {
+    width: toRem(60);
+    height: toRem(60);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue;
+    box-shadow: 5px 5px 0px #000;
+    transition: transform .3s ease;
+    @media (any-hover: hover){
+      &:hover{
+        transform: translateY(-5px);
+      }
+    }
+    img {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
