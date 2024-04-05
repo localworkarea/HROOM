@@ -728,7 +728,7 @@ body {
   width: 100%;
   height: auto;
   max-width: 43.625rem;
-  box-shadow: 5px 5px 0 #fff
+  box-shadow: 5px 5px 0 #000
 }
 .social {
   margin-top: 1.5rem;
@@ -752,6 +752,9 @@ body {
   transition: -webkit-transform .3s ease;
   transition: transform .3s ease;
   transition: transform .3s ease,-webkit-transform .3s ease
+}
+.social__link.link-insta {
+  background-image: radial-gradient(182.58% 44.91% at -17% 7%,#3771c8,#3771c8 12.8%,rgba(102,0,255,0) 100%),radial-gradient(92% 99% at 27% 108%,#fd5,#fd5 10%,#ff543e 50%,#c837ab 100%)
 }
 .social__link img {
   position: relative;
