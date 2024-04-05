@@ -8,13 +8,16 @@
   flex-direction: column;
   align-items: center;
       &.head--big {
-        @include adaptiveValue("padding-top", 40, 100,0,1280.98,480.98);
-        @media (max-width: toEm(376.98)){
-            padding-top: toRem(40) !important;
+        @include adaptiveValue("padding-top", 40, 60,0,1280.98,480.98);
+        @media (max-width: toEm(390.98)){
+            padding-top: toRem(20) !important;
         }
       }
       &.head--sm {
         @include adaptiveValue("padding-top", 80, 60,0,1280.98,480.98);
+        @media (max-width:$mobileSmall){
+          padding-top: toRem(20) !important; 
+        }
       }
   // .head-section__logo
   &__logo {
@@ -68,10 +71,16 @@
       @include adaptiveValue("padding-top", 33, 30,0,1280.98,480.98);
       @include adaptiveValue("padding-left", 70, 50,0,1280.98,375.98);
       @include adaptiveValue("padding-right", 70, 50,0,1280.98,375.98);
-      @include adaptiveValue("padding-bottom", 14, 23,0,1280.98,480.98);
+      // @include adaptiveValue("padding-bottom", 14, 23,0,1280.98,480.98);
       &::before,
       &::after {
         clip-path: polygon(11% 0, 91% 18%, 100% 100%, 0 100%);
+      }
+      @media (min-width:$mobileSmall){
+        padding-bottom: toRem(14);
+      }
+      @media (max-width:$mobileSmall){
+         padding-bottom: toRem(12); 
       }
     }
   }
@@ -89,7 +98,7 @@
     }
     .head--sm & {
       font-weight: 700;
-      @include adaptiveValue("font-size", 24, 18,0,1280.98,480.98);
+      @include adaptiveValue("font-size", 24, 16,0,1280.98,480.98);
     }
   }
 }
