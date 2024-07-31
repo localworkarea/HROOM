@@ -3307,7 +3307,7 @@
             breakpoints: {
                 300: {
                     spaceBetween: 32,
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     loop: true
                 },
                 481: {

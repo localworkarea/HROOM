@@ -206,7 +206,8 @@
     }
 	}
   &__cat,
-  &__mens {
+  &__mens,
+  &__pack {
     position: absolute;
     z-index: 3;
     height: auto;
@@ -231,6 +232,16 @@
       left: -22%;
     }
   }
+	// .section-01__pack
+	&__pack {
+    @include adaptiveValue("width", 150, 64,0,1280.98,480.98);
+    @media (min-width:$mobileSmall){
+      transform: translate(8%, 14%) rotate(-14deg);
+    }
+    @media (max-width:$mobileSmall){
+      transform: translate(-23%, 49%) rotate(-14deg);
+    }
+	}
   // .section-01__mens
   &__mens {
     @include adaptiveValue("width", 800, 350,0,1280.98,480.98);

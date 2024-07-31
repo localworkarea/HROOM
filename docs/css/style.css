@@ -327,7 +327,8 @@ body {
   flex: 1
 }
 .section-01__cat,
-.section-01__mens {
+.section-01__mens,
+.section-01__pack {
   position: absolute;
   z-index: 3;
   height: auto;
@@ -777,6 +778,10 @@ body {
   .section-01__cat {
     left: 0
   }
+  .section-01__pack {
+    -webkit-transform: translate(8%,14%) rotate(-14deg);
+    transform: translate(8%,14%) rotate(-14deg)
+  }
   .section-01__mens {
     right: -2%
   }
@@ -939,6 +944,9 @@ body {
   }
   .section-01__cat {
     width: 44.6875rem
+  }
+  .section-01__pack {
+    width: 9.375rem
   }
   .section-01__mens {
     width: 50rem
@@ -1167,6 +1175,13 @@ body {
   .section-01__cat {
     left: -17%
   }
+  .section-01__pack {
+    width: 4rem
+  }
+  .section-01__pack {
+    -webkit-transform: translate(-23%,49%) rotate(-14deg);
+    transform: translate(-23%,49%) rotate(-14deg)
+  }
   .section-01__mens {
     width: 21.875rem
   }
@@ -1277,6 +1292,9 @@ body {
 @media (max-width:24.43625em) {
   .head-section.head--big {
     padding-top: 1.25rem!important
+  }
+  .head--big .head-section__title {
+    font-size: 1.375rem!important
   }
   .page-bg__speaker {
     width: 14.0625rem
@@ -1435,6 +1453,16 @@ body {
   @supports not (width:clamp(21.875rem ,8.1595546875rem + 45.625vw ,44.6875rem)) {
     .section-01__cat {
       width: calc(21.875rem + 22.8125 * (100vw - 30.06125rem)/ 50)
+    }
+  }
+  @supports (width:clamp(4rem ,0.768415625rem + 10.75vw ,9.375rem)) {
+    .section-01__pack {
+      width: clamp(4rem ,.768415625rem + 10.75vw ,9.375rem)
+    }
+  }
+  @supports not (width:clamp(4rem ,0.768415625rem + 10.75vw ,9.375rem)) {
+    .section-01__pack {
+      width: calc(4rem + 5.375 * (100vw - 30.06125rem)/ 50)
     }
   }
   @supports (width:clamp(21.875rem ,4.965546875rem + 56.25vw ,50rem)) {

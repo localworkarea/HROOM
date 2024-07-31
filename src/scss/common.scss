@@ -64,6 +64,9 @@
       &::after {
         clip-path: polygon(0 0, 100% 17%, 90% 100%, 8% 100%);
       }
+      @media (max-width: toEm(390.98)){
+
+      }
     }
     .head--sm & {
       @include adaptiveValue("margin-top", -25, -20,0,1280.98,480.98);
@@ -95,6 +98,9 @@
     .head--big & {
       font-weight: 800;
       @include adaptiveValue("font-size", 32, 24,0,1280.98,480.98);
+      @media (max-width: toEm(390.98)){
+          font-size: toRem(22) !important;
+      }
     }
     .head--sm & {
       font-weight: 700;
